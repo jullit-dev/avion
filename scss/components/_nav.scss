@@ -1,0 +1,35 @@
+@use "../variables" as *;
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: #726e8d;
+    transition: $main-trs;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+
+  &__link:focus-visible {
+    outline: $outline;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__link:hover {
+      color: $primary;
+    }
+  }
+
+  &__link:active {
+    color: $dark-primary;
+  }
+}

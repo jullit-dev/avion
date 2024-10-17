@@ -1,0 +1,35 @@
+@use "variables" as *;
+
+*,
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body {
+  font-family: $font-family;
+  line-height: 1.5;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: calc($container-width + ($container-offset * 2));
+  padding: 0 $container-offset;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}

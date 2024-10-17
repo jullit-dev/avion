@@ -1,0 +1,121 @@
+@use "../variables" as *;
+
+.header {
+  &__container {
+    display: flex;
+  }
+
+  &__top {
+    $container-width: 1330px;
+    padding: 23px 0;
+    background-color: $white;
+  }
+
+  &__top-container {
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &__logo {
+    text-decoration: none;
+    transition: $main-trs;
+  }
+
+  &__logo:focus {
+    outline: none;
+  }
+
+  &__logo:focus-visible {
+    outline: $outline;
+    outline-color: #726e8d;
+    outline-offset: $outline-offset;
+  }
+
+  &__details {
+    display: flex;
+    align-items: center;
+    gap: 47px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: #726e8d;
+    transition: $main-trs;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+
+  &__link:focus-visible {
+    outline: $outline;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__link:hover {
+      color: $primary;
+    }
+  }
+
+  &__link:active {
+    color: $dark-primary;
+  }
+
+  &__buttons-list {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__buttons-item {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__button {
+    height: 16px;
+    color: $dark-primary;
+    transition: $main-trs;
+  }
+
+  &__button svg path {
+    fill: currentColor;
+  }
+
+  &__button:focus {
+    outline: none;
+  }
+
+  &__button:focus-visible {
+    outline: $outline;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__button:hover {
+      color:#726e8d;
+    }
+  }
+
+  &__button:active {
+    color: $primary;
+  }
+
+  &__bottom {
+    padding: 20px 0;
+    background-color: $light-grey;
+  }
+
+  &__bottom-container {
+    align-items: center;
+    justify-content: center;
+  }
+}
