@@ -2,8 +2,22 @@
 @import 'normalize';
 @import 'fonts';
 @import 'default';
-@import 'btn';
+
+/* blocks */
+@import 'blocks/btn';
+@import 'blocks/title';
+@import 'blocks/grid';
+@import 'blocks/centered';
+@import 'blocks/form';
+@import 'blocks/social';
 
 /* components */
 @import 'components/header';
 @import 'components/nav';
+@import 'components/hero';
+@import 'components/benefits';
+@import 'components/products';
+@import 'components/product';
+@import 'components/newsletter';
+@import 'components/about';
+@import 'components/footer';

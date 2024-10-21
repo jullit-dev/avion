@@ -1,0 +1,13 @@
+@use "../variables" as *;
+
+.products {
+  padding: 80px 0 56px;
+  
+  &__item {
+    grid-column: 3 span;
+  }
+
+  &__item--big {
+    grid-column: 6 span;
+  }
+}

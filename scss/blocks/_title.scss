@@ -1,0 +1,36 @@
+@use "../variables" as *;
+
+.title {
+  font-family: $second-family;
+  font-weight: 400;
+  color: $dark-primary;
+
+  &--small {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  &--medium {
+    font-size: 32px;
+  }
+
+  &--large {
+    font-size: 36px;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+
+  &--mb-small {
+    margin-bottom: 16px;
+  }
+
+  &--mb-medium {
+    margin-bottom: 32px;
+  }
+
+  &--mb-large {
+    margin-bottom: 50px;
+  }
+}

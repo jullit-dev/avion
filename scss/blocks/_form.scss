@@ -1,0 +1,36 @@
+@use "../variables" as *;
+
+.form {
+  display: flex;
+  align-items: center;
+
+  &__input {
+    border: none;
+    outline: none;
+    width: 354px;
+    height: 56px;
+    padding-left: 32px;
+    padding-right: 20px;
+    background-color: $light-grey;
+    font-weight: 400;
+    font-size: 16px;
+    color: $dark-primary;
+  }
+
+  &__input::placeholder {
+    color: rgba(42, 37, 75, 0.2);
+  }
+
+  &__input--dark {
+    background: rgba(255, 255, 255, 0.15);
+    color: $white;
+  }
+
+  &__input--dark::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &__input--flex {
+    flex-grow: 1;
+  }
+}

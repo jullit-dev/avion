@@ -1,0 +1,27 @@
+@use "../variables" as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: $main-trs;
+
+  &--theme-darker {
+    background: $dark-primary;
+    color: $white;
+  }
+
+  &--theme-dark {
+    background: rgba(249, 249, 249, 0.15);
+    color: $white;
+  }
+
+  &--theme-light {
+    background-color: $light-grey;
+    color: $dark-primary;
+  }
+}

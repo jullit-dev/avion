@@ -1,0 +1,47 @@
+@use "../variables" as *;
+
+.product {
+  position: relative;
+
+  &__top {
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.4;
+    color: $dark-primary;
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+  &__link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: $dark-primary;
+  }
+}

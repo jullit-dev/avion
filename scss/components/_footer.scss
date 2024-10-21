@@ -1,0 +1,53 @@
+@use "../variables" as *;
+
+.footer {
+  padding-top: 56px;
+  background-color: $dark-primary;
+
+  &__top {
+    padding-bottom: 48px;
+    border-bottom: 1px solid $primary;
+  }
+
+  &__column {
+    grid-column: 2 span;
+  }
+
+  &__column--big {
+    grid-column: 6 span;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 16px;
+    color: $white;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+  }
+
+  &__copyright {
+    margin-right: 35px;
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+  }
+}

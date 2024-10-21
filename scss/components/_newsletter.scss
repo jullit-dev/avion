@@ -1,0 +1,24 @@
+@use "../variables" as *;
+
+.newsletter {
+  background-color: $light-grey;
+  padding: 52px 10px 65px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 68px 40px 54px;
+    background-color: $white;
+  }
+
+  &__descr {
+    max-width: 470px;
+    margin-bottom: 72px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: $dark-primary;
+  }
+}
