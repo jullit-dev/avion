@@ -24,4 +24,9 @@
     background-color: $light-grey;
     color: $dark-primary;
   }
+
+  &--theme-white {
+    background-color: $white;
+    color: $dark-primary;
+  }
 }

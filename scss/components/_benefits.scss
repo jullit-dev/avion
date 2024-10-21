@@ -11,6 +11,13 @@
     background-repeat: no-repeat;
   }
 
+  &--about &__item {
+    padding: 48px;
+    padding-top: 84px;
+    background-color: $light-grey;
+    background-position: 48px 48px;
+  }
+
   &__item--next {
     background-image: url("../img/icons/next.svg");
   }
@@ -23,7 +30,7 @@
     background-image: url("../img/icons/prices.svg");
   }
 
-  &__item--next {
+  &__item--packaging {
     background-image: url("../img/icons/packaging.svg");
   }
 

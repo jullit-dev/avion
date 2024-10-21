@@ -396,6 +396,10 @@ a {
   background-color: #f9f9f9;
   color: #2a254b;
 }
+.btn--theme-white {
+  background-color: #fff;
+  color: #2a254b;
+}
 
 .title {
   font-family: "Clash Display", sans-serif;
@@ -654,6 +658,12 @@ a {
   background-size: 24px 24px;
   background-repeat: no-repeat;
 }
+.benefits--about .benefits__item {
+  padding: 48px;
+  padding-top: 84px;
+  background-color: #f9f9f9;
+  background-position: 48px 48px;
+}
 .benefits__item--next {
   background-image: url("../img/icons/next.svg");
 }
@@ -663,7 +673,7 @@ a {
 .benefits__item--prices {
   background-image: url("../img/icons/prices.svg");
 }
-.benefits__item--next {
+.benefits__item--packaging {
   background-image: url("../img/icons/packaging.svg");
 }
 .benefits__subtitle {
@@ -754,14 +764,23 @@ a {
 
 .about {
   display: flex;
+  background-color: #fff;
+}
+.about--reverse {
+  flex-direction: row-reverse;
+  background-color: #f9f9f9;
 }
 .about__info {
   display: flex;
   flex-direction: column;
   align-items: start;
   width: 50%;
-  padding: 72px 50px 74px 0;
+  padding: 72px 84px 74px 0;
   padding-left: max(15px, (100% - 1280px) / 2);
+}
+.about--reverse .about__info {
+  padding-left: 84px;
+  padding-right: max(15px, (100% - 1280px) / 2);
 }
 .about__title {
   margin-bottom: 25px;
@@ -831,4 +850,84 @@ a {
   font-weight: 400;
   font-size: 14px;
   color: #fff;
+}
+
+/* about */
+.notice {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #2a254b;
+}
+.notice--hidden {
+  display: none;
+}
+.notice__text {
+  font-weight: 400;
+  font-size: 14px;
+  color: #fff;
+}
+.notice__close {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.about-hero {
+  background-color: #fff;
+}
+.about-hero__content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 88px 48px;
+}
+.about-hero__title {
+  max-width: 704px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.4;
+  color: #2a254b;
+}
+
+.brand-info {
+  padding: 60px 0;
+}
+.brand-info__content {
+  display: flex;
+  gap: 16px;
+}
+.brand-info__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 64px 64px 54px;
+  color: #fff;
+  background-color: #2a254b;
+}
+.brand-info__title {
+  color: #fff;
+  margin-bottom: 12px;
+}
+.brand-info__descr {
+  font-weight: 400;
+  font-size: 18px;
+}
+.brand-info__btn {
+  margin-top: auto;
+}
+.brand-info__text, .brand-info__illustration {
+  width: calc((100% - 16px) / 2);
+}
+.brand-info__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

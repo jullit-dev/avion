@@ -1,0 +1,28 @@
+@use "../variables" as *;
+
+.notice {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: $dark-primary;
+
+  &--hidden {
+    display: none;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    color: $white;
+  }
+
+  &__close {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

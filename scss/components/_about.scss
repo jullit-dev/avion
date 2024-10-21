@@ -2,14 +2,25 @@
 
 .about {
   display: flex;
+  background-color: $white;
+
+  &--reverse {
+    flex-direction: row-reverse;
+    background-color: $light-grey;
+  }
 
   &__info {
     display: flex;
     flex-direction: column;
     align-items: start;
     width: 50%;
-    padding: 72px 50px 74px 0;
+    padding: 72px 84px 74px 0;
     padding-left: max($container-offset, calc((100% - $container-width) / 2));
+  }
+
+  &--reverse &__info {
+    padding-left: 84px;
+    padding-right: max($container-offset, calc((100% - $container-width) / 2));
   }
 
   &__title {

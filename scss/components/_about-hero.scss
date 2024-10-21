@@ -1,0 +1,23 @@
+@use "../variables" as *;
+
+.about-hero {
+  background-color: $white;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 88px 48px;
+  }
+
+  &__title {
+    max-width: 704px;
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.4;
+    color: $dark-primary;
+  }
+}
