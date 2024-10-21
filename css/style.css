@@ -373,6 +373,17 @@ a {
   cursor: pointer;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 /* blocks */
 .btn {
   display: inline-flex;
@@ -930,4 +941,113 @@ a {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* catalog */
+.inner-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.inner-hero--all {
+  background-image: url("../img/all-bg.jpg");
+}
+.inner-hero__content {
+  display: flex;
+  align-items: flex-end;
+  padding: 36px 0;
+  min-height: 210px;
+}
+.inner-hero__title {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.catalog {
+  padding: 36px 0;
+}
+.catalog__column {
+  grid-column: 3 span;
+  padding-top: 12px;
+}
+.catalog__products {
+  grid-column: 9 span;
+}
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 36px;
+}
+.catalog__item {
+  width: calc((100% - 40px) / 3);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+}
+.filters__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-items: center;
+  gap: 12px;
+}
+.filters__title {
+  margin-bottom: 20px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #2a254b;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.custom-checkbox__input {
+  position: absolute;
+  opacity: 0;
+}
+.custom-checkbox__icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  border: 1px solid #dcdcdc;
+  border-radius: 2px;
+}
+.custom-checkbox__icon::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: 2;
+  background-image: url("../img/icons/check.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.custom-checkbox__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2a254b;
+}
+.custom-checkbox__input:checked + .custom-checkbox__icon::after {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

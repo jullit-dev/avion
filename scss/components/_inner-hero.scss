@@ -1,0 +1,26 @@
+@use "../variables" as *;
+
+.inner-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &--all {
+    background-image: url('../img/all-bg.jpg');
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    padding: 36px 0;
+    min-height: 210px;
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.4;
+    color: $white;
+  }
+}
