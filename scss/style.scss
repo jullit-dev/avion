@@ -10,6 +10,7 @@
 @import 'blocks/centered';
 @import 'blocks/form';
 @import 'blocks/social';
+@import 'blocks/stepper';
 
 /* components */
 @import 'components/header';
@@ -32,3 +33,6 @@
 @import 'components/catalog';
 @import 'components/filters';
 @import 'components/custom-checkbox';
+
+/* product */
+@import 'components/product-info';

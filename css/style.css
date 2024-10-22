@@ -384,6 +384,14 @@ a {
   clip: rect(0 0 0 0);
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
 /* blocks */
 .btn {
   display: inline-flex;
@@ -496,6 +504,38 @@ a {
 .social__link {
   display: flex;
   align-items: center;
+}
+
+.stepper {
+  display: flex;
+  width: 122px;
+  background-color: #fff;
+}
+.stepper__btn {
+  width: 42px;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 12px 16px;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  color: #2a254b;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.stepper__btn--disabled {
+  pointer-events: none;
+  color: #ebe8f4;
+}
+.stepper__input {
+  width: calc(100% - 84px);
+  border: none;
+  text-align: center;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 16px;
+  color: #2a254b;
 }
 
 /* components */
@@ -1050,4 +1090,89 @@ a {
 }
 .custom-checkbox__input:checked + .custom-checkbox__icon::after {
   opacity: 1;
+}
+
+/* product */
+.product-info {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+.product-info__content {
+  display: flex;
+  gap: 65px;
+}
+.product-info__text {
+  padding-top: 30px;
+  padding-right: 90px;
+}
+.product-info__top {
+  padding-bottom: 28px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ebe8f4;
+}
+.product-info__title {
+  margin-bottom: 12px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  color: #2a254b;
+}
+.product-info__price {
+  font-weight: 400;
+  font-size: 24px;
+  color: #2a254b;
+}
+.product-info__item:not(:last-of-type) {
+  margin-bottom: 36px;
+}
+.product-info__item:last-of-type {
+  margin-bottom: 48px;
+}
+.product-info__subtitle {
+  margin-bottom: 12px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #2a254b;
+}
+.product-info__descr {
+  font-weight: 400;
+  font-size: 16px;
+  color: #2a254b;
+}
+.product-info__chars {
+  display: flex;
+  gap: 100px;
+}
+.product-info__chars-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.product-info__chars-item:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  width: 1px;
+  height: calc(100% - 10px);
+  background-color: #ebe8f4;
+  transform: translateY(-50%);
+}
+.product-info__chars-caption {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #2a254b;
+}
+.product-info__chars-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: #2a254b;
+}
+.product-info__btns {
+  display: flex;
+  gap: 16px;
 }/*# sourceMappingURL=style.css.map */
