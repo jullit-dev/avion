@@ -536,6 +536,10 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 400;
   font-size: 16px;
   color: #2a254b;
+  background-color: inherit;
+}
+.stepper--cart {
+  background-color: #f9f9f9;
 }
 
 /* components */
@@ -1175,4 +1179,124 @@ input[type=number]::-webkit-outer-spin-button {
 .product-info__btns {
   display: flex;
   gap: 16px;
+}
+
+/* cart */
+.cart {
+  padding: 84px 0;
+  background-color: #f9f9f9;
+}
+.cart__content {
+  padding: 72px 63px 54px;
+  background-color: #fff;
+}
+.cart__table {
+  padding-bottom: 28px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f9f9f9;
+}
+.cart-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+}
+.cart__col {
+  grid-column: 6 span;
+}
+.cart__col--quantity {
+  grid-column: 2 span;
+  padding-left: 75px;
+}
+.cart__col--total {
+  grid-column: 2 span;
+  justify-self: end;
+}
+.cart__col--image {
+  grid-column: 1 span;
+}
+.cart__col--info {
+  grid-column: 5 span;
+}
+.cart__info {
+  padding: 12px 17px;
+  max-width: 266px;
+}
+.cart__row:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+.cart__row.cart__row--heading {
+  padding-bottom: 12px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #f9f9f9;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #2a254b;
+  font-family: "Clash Display", sans-serif;
+}
+.cart__title {
+  margin-bottom: 8px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  color: #2a254b;
+}
+.cart__descr {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #2a254b;
+}
+.cart__stepper {
+  padding-top: 12px;
+}
+.cart__price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2a254b;
+}
+.cart__total {
+  padding-top: 12px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #2a254b;
+}
+.cart__bottom-info {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: right;
+  color: #4e4d93;
+}
+.cart__subtotal {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: right;
+  color: #4e4d93;
+}
+.cart__subtotal-price {
+  margin-left: 16px;
+  font-family: "Clash Display", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  text-align: right;
+  color: #2a254b;
+}
+.cart__btn-wrap {
+  display: flex;
+  justify-content: flex-end;
 }/*# sourceMappingURL=style.css.map */

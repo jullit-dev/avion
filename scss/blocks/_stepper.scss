@@ -30,5 +30,10 @@
     font-weight: 400;
     font-size: 16px;
     color: $dark-primary;
+    background-color: inherit;
+  }
+
+  &--cart {
+    background-color: $light-grey;
   }
 }
