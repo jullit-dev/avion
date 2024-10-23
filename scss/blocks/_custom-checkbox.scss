@@ -44,4 +44,15 @@
   &__input:checked + &__icon::after {
     opacity: 1;
   }
+
+  &__input:focus-visible + &__icon {
+    outline: 2px dashed $primary;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__input:hover + &__icon {
+      background-color: $border-grey;
+    }
+  }
 }

@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 .social {
   display: flex;
   align-items: center;
@@ -6,5 +8,30 @@
   &__link {
     display: flex;
     align-items: center;
+    color: $white;
+    transform: $main-trs;
+  }
+
+  &__link svg {
+    fill: currentColor;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+
+  &__link:focus-visible {
+    outline: $outline;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__link:hover {
+      color: $border-dark;
+    }
+  }
+
+  &__link:active {
+    color: $primary;
   }
 }

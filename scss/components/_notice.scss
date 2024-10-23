@@ -24,5 +24,30 @@
     right: 16px;
     top: 50%;
     transform: translateY(-50%);
+    color: $white;
+    transition: $main-trs;
+  }
+
+  &__close svg {
+    fill: currentColor;
+  }
+
+  &__close:focus {
+    outline: none;
+  }
+
+  &__close:focus-visible {
+    outline: $outline;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__close:hover {
+      color: $border-dark;
+    }
+  }
+
+  &__link:active {
+    color: $primary;
   }
 }

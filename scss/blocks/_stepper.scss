@@ -15,9 +15,29 @@
     font-size: 16px;
     color: $dark-primary;
     user-select: none;
+    transition: $main-trs;
   }
 
-  &__btn--disabled {
+  &__btn:focus {
+    outline: none;
+  }
+
+  &__btn:focus-visible {
+    outline: 2px dashed $primary;
+    z-index: 2;
+  }
+
+  @media (any-hover: hover) {
+    &__btn:hover {
+      background-color: $border-grey;
+    }
+  }
+
+  &__btn:active {
+    background-color: $border-dark;
+  }
+
+  &__btn:disabled {
     pointer-events: none;
     color: $border-grey;
   }
@@ -31,6 +51,26 @@
     font-size: 16px;
     color: $dark-primary;
     background-color: inherit;
+    transition: $main-trs;
+  }
+
+  &__input:focus {
+    outline: none;
+  }
+
+  &__input:focus-visible {
+    outline: 2px dashed $primary;
+    z-index: 2;
+  }
+
+  @media (any-hover: hover) {
+    &__input:hover {
+      background-color: $border-grey;
+    }
+  }
+
+  &__input:active {
+    background-color: $border-dark;
   }
 
   &--cart {

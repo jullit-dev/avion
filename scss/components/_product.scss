@@ -30,12 +30,32 @@
 
   &__link {
     color: inherit;
+    transition: $main-trs;
   }
 
   &__link::after {
     content: '';
     position: absolute;
     inset: 0;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+
+  &__link:focus-visible::after {
+    outline: 2px dashed $dark-primary;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__link:hover {
+      color: $primary;
+    }
+  }
+
+  &__link:active {
+    color: $border-dark;
   }
 
   &__price {

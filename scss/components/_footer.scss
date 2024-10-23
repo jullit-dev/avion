@@ -35,6 +35,26 @@
     font-weight: 400;
     font-size: 14px;
     color: $white;
+    transition: $main-trs;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+
+  &__link:focus-visible {
+    outline: $outline;
+    outline-offset: $outline-offset;
+  }
+
+  @media (any-hover: hover) {
+    &__link:hover {
+      color: $border-dark;
+    }
+  }
+
+  &__link:active {
+    color: $primary;
   }
 
   &__bottom {

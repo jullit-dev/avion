@@ -10,9 +10,28 @@
   line-height: 1.5;
   transition: $main-trs;
 
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px dashed $primary;
+    outline-offset: $outline-offset;
+  }
+
   &--theme-darker {
     background: $dark-primary;
     color: $white;
+  }
+
+  @media (any-hover: hover) {
+    &--theme-darker:hover {
+      background-color: #3e367c;
+    }
+  }
+
+  &--theme-darker:active {
+    background-color: $primary;
   }
 
   &--theme-dark {
@@ -20,13 +39,44 @@
     color: $white;
   }
 
+  @media (any-hover: hover) {
+    &--theme-dark:hover {
+      background: rgba(249, 249, 249, 0.3);
+    }
+  }
+
+  &--theme-dark:active {
+    background: rgba(249, 249, 249, 0.4);
+  }
+
   &--theme-light {
     background-color: $light-grey;
     color: $dark-primary;
   }
 
+  @media (any-hover: hover) {
+    &--theme-light:hover {
+      background-color: $border-grey;
+    }
+  }
+
+  &--theme-light:active {
+    background-color: $border-dark;
+  }
+
   &--theme-white {
     background-color: $white;
     color: $dark-primary;
+  }
+
+  @media (any-hover: hover) {
+    &--theme-white:hover {
+      background-color: $border-grey;
+    }
+  }
+
+  &--theme-white:active {
+    background-color: $primary;
+    color: $white;
   }
 }

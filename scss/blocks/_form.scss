@@ -15,6 +15,15 @@
     font-weight: 400;
     font-size: 16px;
     color: $dark-primary;
+    transition: $main-trs;
+  }
+  
+  &__input:focus {
+    outline: none;
+  }
+
+  &__input:focus-visible {
+    outline: 2px dashed $primary;
   }
 
   &__input::placeholder {
