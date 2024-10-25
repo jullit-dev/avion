@@ -1,9 +1,14 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .stepper {
   display: flex;
   width: 122px;
   background-color: $white;
+
+  @include mobile {
+    width: 100%;
+  }
 
   &__btn {
     width: 42px;
@@ -75,5 +80,9 @@
 
   &--cart {
     background-color: $light-grey;
+
+    @include mobile {
+      background-color: $white;
+    }
   }
 }

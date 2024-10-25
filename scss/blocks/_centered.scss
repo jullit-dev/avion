@@ -1,4 +1,10 @@
+@use "../media" as *;
+
 .centered {
   padding-top: 36px;
   text-align: center;
+
+  @include mobile {
+    padding-top: 29px;
+  }
 }

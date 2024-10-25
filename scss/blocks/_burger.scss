@@ -1,0 +1,56 @@
+@use "../variables" as *;
+@use "../media" as *;
+
+.burger {
+  position: relative;
+  display: none;
+  width: 16px;
+  height: 16px;
+
+  @include tablet {
+    display: block;
+  }
+
+  &--active &__line:first-child {
+    top: 50%;
+    left: 10%;
+    transform: rotate(45deg);
+  }
+
+  &--active &__line:nth-child(2),
+  &--active &__line:nth-child(3) {
+    opacity: 0;
+  }
+
+  &--active &__line:nth-child(4) {
+    top: 50%;
+    left: 10%;
+    transform: rotate(-45deg);
+  }
+
+  &__line {
+    position: absolute;
+    left: 50%;
+    width: 12px;
+    height: 1px;
+    background-color: $dark-primary;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  &__line:first-child {
+    top: 3px;
+  }
+
+  &__line:nth-child(2) {
+    top: 6px;
+  }
+
+  &__line:nth-child(3) {
+    top: 9px;
+  }
+
+  &__line:nth-child(4) {
+    top: 12px;
+  }
+}

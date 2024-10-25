@@ -1,10 +1,48 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .products {
   padding: 80px 0 56px;
+
+  @include mobile {
+    padding: 48px 0 38px;
+  }
   
   &__item {
     grid-column: 3 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__list {
+    row-gap: $gap;
+  }
+
+  &__list--mobile-slider {
+    @include mobile {
+      display: flex;
+      width: calc(100% + $container-offset);
+      overflow-x: auto;
+    }
+  }
+
+  &__list--mobile-slider &__item {
+    @include mobile {
+      width: 200px;
+      flex-shrink: 0;
+    }
+  }
+
+  &__list--mobile-slider .product__image {
+    @include mobile {
+      height: 251px;
+    }
   }
 
   &__item--big {

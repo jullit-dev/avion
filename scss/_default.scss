@@ -21,6 +21,7 @@ a {
 }
 
 .body {
+  min-width: 390px;
   font-family: $font-family;
   line-height: 1.5;
 }
@@ -61,4 +62,8 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-appearance: none;
     appearance: none;
     margin: 0; 
+}
+
+.stop-scroll {
+  overflow: hidden;
 }

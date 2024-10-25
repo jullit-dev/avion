@@ -1,7 +1,26 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .benefits {
   padding: 60px 0 80px;
+
+  @include mobile {
+    padding: 48px 0 45px;
+  }
+
+  &__title {
+    @include mobile {
+      max-width: 80%;
+    }
+  }
+
+  &__list {
+    row-gap: $gap;
+
+    @include mobile {
+      row-gap: 35px;
+    }
+  }
 
   &__item {
     grid-column: 3 span;
@@ -9,6 +28,20 @@
     background-position: left top;
     background-size: 24px 24px;
     background-repeat: no-repeat;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  &--about &__list {
+    @include mobile {
+      row-gap: 26px;
+    }
   }
 
   &--about &__item {
@@ -16,6 +49,11 @@
     padding-top: 84px;
     background-color: $light-grey;
     background-position: 48px 48px;
+
+    @include mobile {
+      padding: 72px 24px 36px;
+      background-position: 24px 36px;
+    }
   }
 
   &__item--next {
@@ -41,6 +79,10 @@
     font-size: 20px;
     line-height: 1.4;
     color: $dark-primary;
+
+    @include mobile {
+      font-size: 16px;
+    }
   }
 
   &__descr {
@@ -48,5 +90,9 @@
     font-size: 16px;
     line-height: 1.5;
     color: $dark-primary;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 }

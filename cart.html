@@ -68,6 +68,14 @@
                 </svg>
               </button>
             </li>
+            <li class="header__buttons-item">
+              <button class="btn-reset burger" aria-label="Search">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -108,8 +116,8 @@
 
   <main>
     <section class="cart">
-      <h1 class="visually-hidden">Cart</h1>
       <div class="container">
+        <h1 class="visually-hidden cart__title">Your shopping cart</h1>
         <div class="cart__content">
           <div class="cart__table">
             <div class="cart__row cart__row--heading cart-grid">
@@ -123,7 +131,7 @@
               </div>
               <div class="cart__col cart__col--info">
                 <div class="cart__info">
-                  <h2 class="cart__title">Graystone vase</h2>
+                  <h2 class="cart__title-product">Graystone vase</h2>
                   <p class="cart__descr">
                     A&nbsp;timeless ceramic vase with a&nbsp;tri color grey glaze.
                   </p>
@@ -149,7 +157,7 @@
               </div>
               <div class="cart__col cart__col--info">
                 <div class="cart__info">
-                  <h2 class="cart__title">Basic white vase</h2>
+                  <h2 class="cart__title-product">Basic white vase</h2>
                   <p class="cart__descr">
                     Beautiful and simple this is&nbsp;one for the classics collections</p>
                   <span class="cart__price">£125</span>
@@ -190,7 +198,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top grid">
-        <div class="footer__column">
+        <div class="footer__column footer__column--menu">
           <h2 class="footer__title">Menu</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">
@@ -211,7 +219,7 @@
           </ul>
         </div>
 
-        <div class="footer__column">
+        <div class="footer__column footer__column--categories">
           <h2 class="footer__title">Categories</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">
@@ -235,7 +243,7 @@
           </ul>
         </div>
 
-        <div class="footer__column">
+        <div class="footer__column footer__column--company">
           <h2 class="footer__title">Our company</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">

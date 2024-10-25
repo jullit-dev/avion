@@ -1,7 +1,13 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: $gap;
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+  }
 }

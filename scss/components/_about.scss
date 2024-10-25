@@ -1,12 +1,24 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .about {
-  display: flex;
   background-color: $white;
 
-  &--reverse {
+  &__content {
+    display: flex;
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &--reverse &__content {
     flex-direction: row-reverse;
     background-color: $light-grey;
+
+    @include mobile {
+      flex-direction: column-reverse;
+    }
   }
 
   &__info {
@@ -16,16 +28,30 @@
     width: 50%;
     padding: 72px 84px 74px 0;
     padding-left: max($container-offset, calc((100% - $container-width) / 2));
+
+    @include mobile {
+      align-items: center;
+      width: 100%;
+      padding: 48px 24px 38px;
+    }
   }
 
   &--reverse &__info {
     padding-left: 84px;
     padding-right: max($container-offset, calc((100% - $container-width) / 2));
+
+    @include mobile {
+      padding: 48px 24px 62px;
+    }
   }
 
   &__title {
     margin-bottom: 25px;
     max-width: 514px;
+
+    @include mobile {
+      margin-bottom: 12px;
+    }
   }
 
   &__descr {
@@ -33,10 +59,20 @@
     font-weight: 400;
     font-size: 16px;
     color: #505977;
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__descr:not(:last-of-type) {
     margin-bottom: 30px;
+  }
+
+  &__descr:last-of-type {
+    @include mobile {
+        margin-bottom: 64px;
+    }
   }
 
   &__btn {
@@ -46,10 +82,18 @@
   &__illustration {
     flex-shrink: 0;
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   &__image {
     width: 100%;
     object-fit: cover;
+
+    @include mobile {
+      height: 358px;
+    }
   }
 }

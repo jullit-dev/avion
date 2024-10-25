@@ -1,20 +1,53 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .footer {
   padding-top: 56px;
   background-color: $dark-primary;
 
+  @include mobile {
+    padding: 40px 0 0;
+  }
+
   &__top {
     padding-bottom: 48px;
     border-bottom: 1px solid $primary;
+    
+    @include tablet {
+      row-gap: calc($gap * 2);
+    }
+
+    @include mobile {
+      padding-bottom: 16px;
+    }
   }
 
   &__column {
     grid-column: 2 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 2 span;
+    }
+  }
+
+  &__column--categories {
+    order: -1;
   }
 
   &__column--big {
     grid-column: 6 span;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  &__column--big .form__input {
+    width: 220px;
   }
 
   &__title {
@@ -62,6 +95,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 24px 0;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      row-gap: 10px;
+      padding: 20px;
+    }
   }
 
   &__copyright {
@@ -69,5 +108,18 @@
     font-weight: 400;
     font-size: 14px;
     color: $white;
+  }
+
+  &__form {
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    @include mobile {
+      flex-direction: row;
+      gap: 0;
+    }
   }
 }

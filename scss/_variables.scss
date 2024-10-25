@@ -1,3 +1,5 @@
+@use "media" as *;
+
 $dark-primary: #2a254b;
 $primary: #4e4d93;
 $light-grey: #f9f9f9;
@@ -8,7 +10,7 @@ $images---dark-chair: #f6f6f6;
 
 $gap: 20px;
 $container-width: 1280px;
-$container-offset: 15px;
+$container-offset: 24px;
 
 $main-trs: color 0.3s ease,
   border-color 0.3s ease,

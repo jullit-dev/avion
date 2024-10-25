@@ -1,8 +1,14 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .newsletter {
   background-color: $light-grey;
   padding: 52px 10px 65px;
+
+  @include mobile {
+    background-color: $white;
+    padding: 0;
+  }
 
   &__content {
     display: flex;
@@ -10,6 +16,17 @@
     align-items: center;
     padding: 68px 40px 54px;
     background-color: $white;
+
+    @include mobile {
+      padding: 48px 0 38px;
+    }
+  }
+
+  &__title {
+    @include mobile {
+      max-width: 470px;
+      width: 100%;
+    }
   }
 
   &__descr {
@@ -20,5 +37,11 @@
     line-height: 1.5;
     text-align: center;
     color: $dark-primary;
+
+    @include mobile {
+      text-align: left;
+      margin-bottom: 64px;
+      font-size: 14px;
+    }
   }
 }

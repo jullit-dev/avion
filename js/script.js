@@ -1,5 +1,27 @@
 const noticeEl = document.querySelector('.notice');
 const stepperEls = document.querySelectorAll('.stepper');
+const burgerEl = document.querySelector('.burger');
+const filtersBtnEl = document.querySelector('.catalog__mobile-btn');
+
+if (filtersBtnEl) {
+  const filtersEl = document.querySelector('.filters');
+  filtersBtnEl.addEventListener('click', () => {
+    filtersBtnEl.classList.toggle('catalog__mobile-btn--active');
+    filtersEl.classList.toggle('filters--active');
+  });
+}
+
+if (burgerEl) {
+  const body = document.body;
+  const menuEl = document.querySelector('.header__bottom');
+  const menuListEl = document.querySelector('.header__list');
+  burgerEl.addEventListener('click', () => {
+    burgerEl.classList.toggle('burger--active');
+    menuEl.classList.toggle('header__bottom--active');
+    menuListEl.classList.toggle('header__list--active');
+    body.classList.toggle('stop-scroll');
+  });
+};
 
 if (noticeEl) {
   const noticeCloseEl = noticeEl.querySelector('.notice__close');

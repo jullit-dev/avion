@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Avion</title>
   <link href="css/style.css" rel="stylesheet">
+  <script defer src="js/script.js"></script>
 </head>
 
 <body class="body">
@@ -67,6 +68,14 @@
                 </svg>
               </button>
             </li>
+            <li class="header__buttons-item">
+              <button class="btn-reset burger" aria-label="Search">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -121,6 +130,12 @@
       <div class="container">
         <div class="grid catalog__content">
           <div class="catalog__column">
+            <button class="btn-reset btn btn--theme-light btn--with-icon catalog__mobile-btn">
+              Filters
+              <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 6L8.5 11L4.5 6H12.5Z" fill="currentColor"/>
+              </svg>                
+            </button>
             <div class="filters">
               <div class="filters__item">
                 <h3 class="filters__title">Product type</h3>
@@ -338,7 +353,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top grid">
-        <div class="footer__column">
+        <div class="footer__column footer__column--menu">
           <h2 class="footer__title">Menu</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">
@@ -359,7 +374,7 @@
           </ul>
         </div>
 
-        <div class="footer__column">
+        <div class="footer__column footer__column--categories">
           <h2 class="footer__title">Categories</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">
@@ -383,7 +398,7 @@
           </ul>
         </div>
 
-        <div class="footer__column">
+        <div class="footer__column footer__column--company">
           <h2 class="footer__title">Our company</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">

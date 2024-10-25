@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .btn {
   display: inline-flex;
@@ -9,6 +10,10 @@
   font-size: 16px;
   line-height: 1.5;
   transition: $main-trs;
+
+  @include mobile {
+    width: 100%;
+  }
 
   &:focus {
     outline: none;
@@ -78,5 +83,13 @@
   &--theme-white:active {
     background-color: $primary;
     color: $white;
+  }
+
+  &--with-icon {
+    gap: 12px;
+  }
+
+  &--with-icon svg {
+    transition: transform 0.3s ease;
   }
 }

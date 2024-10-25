@@ -1,11 +1,24 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .hero {
   padding: 60px 0;
 
+  @include tablet {
+    padding: 0;
+  }
+
+  &__container {
+    padding: 0;
+  }
+
   &__content {
     display: flex;
     background-color: $dark-primary;
+
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   &__text {
@@ -15,6 +28,11 @@
     flex-grow: 1;
     gap: 41px;
     padding: 60px;
+
+    @include mobile {
+      padding: 40px 24px 24px;
+      gap: 32px;
+    }
   }
 
   &__title {
@@ -24,10 +42,18 @@
     font-size: 32px;
     line-height: 1.4;
     color: $white;
+
+    @include tablet {
+      margin-bottom: 50px;
+    }
   }
 
   &__link {
     margin-bottom: auto;
+
+    @include tablet {
+      order: 3;
+    }
   }
 
   &__descr {
@@ -41,5 +67,9 @@
   &__image {
     height: 100%;
     flex-shrink: 0;
+
+    @include tablet {
+      display: none;
+    }
   }
 }

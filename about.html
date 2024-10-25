@@ -84,6 +84,14 @@
                 </svg>
               </button>
             </li>
+            <li class="header__buttons-item">
+              <button class="btn-reset burger" aria-label="Search">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -156,21 +164,23 @@
     </section>
 
     <section class="about about--reverse">
-      <div class="about__info">
-        <h2 class="title title--small about__title">
-          Our service isn&rsquo;t just personal, it&rsquo;s actually
-          hyper personally exquisite
-        </h2>
-        <p class="about__descr">
-          When we&nbsp;started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market. 
-        </p>
-        <p class="about__descr">
-          Handmade, and lovingly crafted furniture and homeware is&nbsp;what we&nbsp;live, breathe and design so&nbsp;our Chelsea boutique become the hotbed for the London interior design community.
-        </p>
-        <button class="btn btn-reset btn--theme-white about__btn">Get in touch</button>
-      </div>
-      <div class="about__illustration">
-        <img class="about__image" src="img/about-2.jpg" srcset="img/about-2@2x.jpg 2x" aria-hidden="true" width="720" height="603" loading="lazy" alt="">
+      <div class="about__content">
+        <div class="about__info">
+          <h2 class="title title--small about__title">
+            Our service isn&rsquo;t just personal, it&rsquo;s actually
+            hyper personally exquisite
+          </h2>
+          <p class="about__descr">
+            When we&nbsp;started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market. 
+          </p>
+          <p class="about__descr">
+            Handmade, and lovingly crafted furniture and homeware is&nbsp;what we&nbsp;live, breathe and design so&nbsp;our Chelsea boutique become the hotbed for the London interior design community.
+          </p>
+          <button class="btn btn-reset btn--theme-white about__btn">Get in touch</button>
+        </div>
+        <div class="about__illustration">
+          <img class="about__image" src="img/about-2.jpg" srcset="img/about-2@2x.jpg 2x" aria-hidden="true" width="720" height="603" loading="lazy" alt="">
+        </div>
       </div>
     </section>
 
@@ -241,7 +251,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__top grid">
-        <div class="footer__column">
+        <div class="footer__column footer__column--menu">
           <h2 class="footer__title">Menu</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">
@@ -262,7 +272,7 @@
           </ul>
         </div>
 
-        <div class="footer__column">
+        <div class="footer__column footer__column--categories">
           <h2 class="footer__title">Categories</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">
@@ -286,7 +296,7 @@
           </ul>
         </div>
 
-        <div class="footer__column">
+        <div class="footer__column footer__column--company">
           <h2 class="footer__title">Our company</h2>
           <ul class="list-reset footer__list">
             <li class="footer__item">

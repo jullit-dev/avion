@@ -1,4 +1,5 @@
 @use "../variables" as *;
+@use "../media" as *;
 
 .catalog {
   $column-gap: 20px;
@@ -9,10 +10,35 @@
   &__column {
     grid-column: 3 span;
     padding-top: 12px;
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  &__mobile-btn {
+    display: none;
+
+    @include mobile {
+      display: inline-flex;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__mobile-btn--active svg {
+    transform: rotate(180deg);
   }
 
   &__products {
     grid-column: 9 span;
+
+    @include tablet {
+      $elems: 2;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
   }
 
   &__list {
@@ -20,6 +46,11 @@
     flex-wrap: wrap;
     column-gap: $column-gap;
     row-gap: 36px;
+
+    @include mobile {
+      column-gap: 16px;
+      row-gap: 20px;
+    }
   }
 
   &__item {
