@@ -3,7 +3,6 @@
 
 .catalog {
   $column-gap: 20px;
-  $elems: 3;
 
   padding: 36px 0;
 
@@ -32,10 +31,6 @@
   &__products {
     grid-column: 9 span;
 
-    @include tablet {
-      $elems: 2;
-    }
-
     @include mobile {
       grid-column: 4 span;
     }
@@ -54,6 +49,10 @@
   }
 
   &__item {
-    width: calc((100% - ($elems - 1) * $column-gap) / $elems);
+    width: calc((100% - 2 * $column-gap) / 3);
+
+    @include tablet {
+      width: calc((100% - $column-gap) / 2);
+    }
   }
 }
